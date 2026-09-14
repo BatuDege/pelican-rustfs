@@ -67,9 +67,7 @@ and add the RustFS IP address or hostname under:
 ```yaml
 system:
   backups:
-    restore_host_allowlist:
-      - "xx.xxx.xxx.xx"
-      - "rustfs-deinname.ts.net"
+    restore_host_allowlist: []
 ```
 
 For example:
