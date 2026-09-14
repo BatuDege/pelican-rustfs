@@ -1,4 +1,4 @@
-FROM rustfs/rustfs:latest AS rustfs
+FROM rustfs/rustfs:1.0.0-rc.6 AS rustfs
 
 FROM alpine:3.24
 
