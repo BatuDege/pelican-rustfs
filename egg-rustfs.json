@@ -1,0 +1,61 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PANEL",
+    "meta": {
+        "version": "PLCN_v3",
+        "update_url": null
+    },
+    "exported_at": "2026-09-14T18:21:55+00:00",
+    "name": "RustFS",
+    "author": "Batudege8@gmail.com",
+    "uuid": "70de62e1-5a1e-455e-bb0f-761692807a74",
+    "description": "RustFS S3-compatible object storage for Pelican",
+    "icon": null,
+    "tags": [
+        "storage",
+        "s3",
+        "rustfs"
+    ],
+    "features": [],
+    "docker_images": {
+        "RustFS": "ghcr.io/batudege/pelican-rustfs:latest"
+    },
+    "file_denylist": [],
+    "startup_commands": {
+        "Default": "/entrypoint.sh"
+    },
+    "config": {
+        "files": "{}",
+        "startup": "{}",
+        "logs": "{}",
+        "stop": "^c"
+    },
+    "scripts": {
+        "installation": {
+            "script": "#!/bin/bash\r\n\r\nset -e\r\n\r\ncd /mnt/server\r\n\r\necho \"Creating RustFS data directory...\"\r\n\r\nmkdir -p data\r\n\r\necho \"Setting RustFS directory ownership...\"\r\n\r\nchown -R 10001:10001 data\r\n\r\necho \"RustFS data directory:\"\r\nls -ld data\r\n\r\necho \"RustFS installation completed.\"",
+            "container": "ghcr.io/pelican-eggs/installers:debian",
+            "entrypoint": "bash"
+        }
+    },
+    "variables": [
+        {
+            "name": "Access Key",
+            "description": "RustFS S3 access key",
+            "env_variable": "RUSTFS_ACCESS_KEY",
+            "default_value": "rustfsadmin",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": [],
+            "sort": 1
+        },
+        {
+            "name": "Secret Key",
+            "description": "RustFS S3 secret key",
+            "env_variable": "RUSTFS_SECRET_KEY",
+            "default_value": "CHANGE_ME_TO_A_SECURE_SECRET",
+            "user_viewable": false,
+            "user_editable": true,
+            "rules": [],
+            "sort": 2
+        }
+    ]
+}
