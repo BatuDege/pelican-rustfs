@@ -2,6 +2,10 @@ FROM rustfs/rustfs:latest AS rustfs
 
 FROM alpine:3.24
 
+LABEL org.opencontainers.image.title="Pelican RustFS"
+LABEL org.opencontainers.image.description="RustFS S3-compatible object storage Yolk for Pelican"
+LABEL org.opencontainers.image.source="https://github.com/BatuDege/pelican-rustfs"
+
 RUN apk add --no-cache ca-certificates tini \
     && addgroup -g 10001 -S container \
     && adduser -u 10001 -S -D -h /home/container -G container container \
