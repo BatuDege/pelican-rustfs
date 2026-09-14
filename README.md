@@ -1,8 +1,3 @@
-Ja, unbedingt. Das ist für unser Egg eine wichtige Besonderheit, weil RustFS gerade für **Backups in Pelican** interessant ist.
-
-Ich würde die README ungefähr so strukturieren:
-
-````markdown
 # Pelican RustFS
 
 RustFS S3-compatible object storage server for Pelican.
