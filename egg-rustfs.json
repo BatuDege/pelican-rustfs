@@ -17,7 +17,7 @@
     ],
     "features": [],
     "docker_images": {
-        "RustFS": "ghcr.io/batudege/pelican-rustfs:latest"
+        "RustFS": "ghcr.io/batudege/pelican-rustfs:v1.0.0"
     },
     "file_denylist": [],
     "startup_commands": {
