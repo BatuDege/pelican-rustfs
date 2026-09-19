@@ -25,9 +25,9 @@
     },
     "config": {
         "files": "{}",
-        "startup": "{
+        "startup": {
 		"done": "RustFS is ready"
-	}",
+	},
         "logs": "{}",
         "stop": "^c"
     },
