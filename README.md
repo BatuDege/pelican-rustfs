@@ -124,6 +124,10 @@ Configure a Pelican Mount with:
 | Container Target | `/rustfs-data` |
 | Read Only | Disabled |
 
+<img width="1259" height="1134" alt="image" src="https://github.com/user-attachments/assets/f5ffd1d3-423c-44a3-93d4-eb7653e92aae" />
+
+
+
 The Wing must allow the host path through `allowed_mounts`.
 
 For example, in:
