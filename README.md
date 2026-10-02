@@ -4,8 +4,6 @@ RustFS S3-compatible object storage server for Pelican.
 
 This repository contains a custom Pelican Egg and Docker image for running RustFS as an S3-compatible storage server.
 
-**Version: 1.1.0**
-
 ## Features
 
 - RustFS S3-compatible object storage
