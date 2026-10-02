@@ -11,12 +11,20 @@ echo "RustFS data path: ${RUSTFS_DATA_PATH}"
 if [ ! -d "${RUSTFS_DATA_PATH}" ]; then
     echo "ERROR: RustFS storage mount is missing!"
     echo "Expected mount at: ${RUSTFS_DATA_PATH}"
+    echo ""
+    echo "HINT: Create a Pelican mount and attach it to /rustfs-data."
+    echo "See: https://github.com/BatuDege/pelican-rustfs#pelican-mount"
     exit 1
 fi
 
 if ! touch "${RUSTFS_DATA_PATH}/.rustfs-write-test" 2>/dev/null; then
     echo "ERROR: RustFS storage is not writable!"
     echo "The mount must be writable by the container user."
+    echo ""
+    echo "HINT: Check the permissions of the host directory and make sure"
+    echo "      the mount is not read-only."
+    echo "      Example: chown -R <UID>:<GID> /path/to/rustfs-data"
+    echo "See: https://github.com/BatuDege/pelican-rustfs#pelican-mount"
     exit 1
 fi
 
